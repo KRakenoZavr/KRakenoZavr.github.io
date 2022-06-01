@@ -272,7 +272,6 @@ const drawChip = ({text, clientX, clientY, scrollX, scrollY}) => {
 
 const mouseOverChip = (text, e) => {
     e.preventDefault()
-    document.querySelector('.chip').style.opacity = "0"
     const {clientX, clientY} = e
     const {scrollX, scrollY} = window
     drawChip({text, clientX, clientY, scrollX, scrollY})
@@ -404,7 +403,7 @@ const drawData = ({data, minY, maxY, minX, maxX}) => {
 
         circle.addEventListener(
             'mouseenter',
-            mouseOverChip.bind(null, item.xValue.toISOString().substr(0, 10))
+            mouseOverChip.bind(null, `${item.yValue >= 5000 ? "XP" : "Level"}: ${item.yValue}\n Date: ${item.xValue.toISOString().substr(0, 10)}`)
         )
         svgElements.tableData().append(circle)
 
@@ -484,7 +483,7 @@ const drawDataProjects = (data, min, max) => {
 
         rect.addEventListener(
             'mouseenter',
-            mouseOverChip.bind(null, `xp: ${data[i].yValue}\n project: ${data[i].xValue}`)
+            mouseOverChip.bind(null, `XP: ${data[i].yValue}\n Project: ${data[i].xValue}`)
         )
         svgElements.tableData().append(rect)
     }
@@ -594,9 +593,6 @@ const main = async () => {
 
     bindButtons(diagramsData)
     byTimeDrawer(diagramsData.levelByTime)
-
-    console.log(myProfile)
-    console.log(diagramsData)
 }
 
 main()
