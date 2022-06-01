@@ -1,0 +1,111 @@
+
+* {
+    font-family: sans-serif;
+}
+
+html {
+    /*background: #2B2A33;*/
+    /*color: #fff;*/
+}
+
+.chip {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    background: blanchedalmond;
+    text-align: center;
+
+    padding: 6px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    opacity: 0;
+
+    transition: all 0.7s ease;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+}
+
+#userInfo {
+    padding: 12px 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    max-width: 250px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.info {
+    padding-left: 20px;
+}
+
+.info-msg {
+    padding-left: 28px;
+    color: brown;
+    font-style: italic;
+}
+
+.container {
+    padding-top: 24px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.btn-container div {
+    padding: 0 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-container div:hover {
+    transition: 0.3s ease;
+    background: antiquewhite;
+}
+
+@media (max-width: 768px) {
+    .btn-container div:not(:last-child) {
+        border-bottom: 2px solid black;
+    }
+    .btn-container {
+        flex-direction: column;
+        width: 83vw;
+    }
+    .btn-container div {
+        padding: 0;
+        margin: 0 16px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    #userInfo {
+        margin-left: 16px;
+        margin-bottom: 16px;
+        width: 80vw;
+        max-width: 80vw;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .btn-container div:not(:last-child) {
+        border-right: 2px solid black;
+    }
+}
+
+

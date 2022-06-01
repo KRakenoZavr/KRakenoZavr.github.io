@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>GRAPHQL</title>
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div id="userInfo"></div>
+        <div class="svg-container">
+
+            <div class="btn-container">
+                <div id="levelByTime">
+                    <p>Level by time graph</p>
+                </div>
+                <div id="xpByTime">
+                    <p>Xp by time graph</p>
+                </div>
+                <div id="xpByProject">
+                    <p>Xp by project graph</p>
+                </div>
+            </div>
+
+            <svg width="1200" height="1000" id="svgArea">
+
+                <g transform="translate(50, 50)">
+
+                    <g>
+                        <style>
+                            .svg-text-y {
+                                font: 11px sans-serif;
+                                fill: red;
+                            }
+                        </style>
+                        <path d="M 0 0 L 0 500" stroke-width="2" stroke="black"/>
+
+                        <g id="axisY"></g>
+                        <g id="textY" transform="translate(-30, 0)">
+
+                        </g>
+                    </g>
+
+                    <g>
+                        <style>
+                            .svg-text-x {
+                                font: 8px sans-serif;
+                                fill: red;
+                            }
+                        </style>
+                        <path d="M 0 500 L 1000 500" stroke-width="2" stroke="black"/>
+
+                        <g id="axisX"></g>
+                        <g id="textX" transform="translate(0, 30)">
+
+                        </g>
+                    </g>
+
+                    <g id="tableData">
+
+                    </g>
+                </g>
+
+            </svg>
+
+        </div>
+
+    </div>
+    <div class="chip"></div>
+</div>
+</body>
+</html>
