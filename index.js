@@ -193,6 +193,10 @@ const fetchQueries = async () => {
     )
     const transactions = await Promise.all(transactionsPromises)
 
+    if (!userId || progress.length === 0 || transactions.length === 0) {
+        alert("There are some problems with fetching data from graphql server, please try again later")
+    }
+
     return {userId, transactions}
 }
 
