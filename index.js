@@ -139,11 +139,6 @@ const GRAPHQL_URL = 'https://01.alem.school/api/graphql-engine/v1/graphql'
 const USER_LOGIN = 'KRaken'
 const APP = document.querySelector('#app')
 // svgs
-const tableData = document.querySelector('#tableData')
-const textX = document.querySelector('#textX')
-const textY = document.querySelector('#textY')
-const svgX = document.querySelector('#axisX')
-const svgY = document.querySelector('#axisY')
 const svgElements = {
     tableData: () => document.querySelector('#tableData'),
     textX: () => document.querySelector('#textX'),
